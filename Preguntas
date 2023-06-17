@@ -1,0 +1,19 @@
+Buenas tardes. Espero todos se encuentren bien. Tengo una duda respecto al proceso y el uso de los endpoints de towerbank.
+
+* Entiendo que son cuatro 04 endpoints:
+
+1.- Get Client Account Info: Con esto obtenemos el balance de los clientes de Towerbank.
+2.- Account Transaction: Crear una transacción de compra o venta desde una cuenta del cliente.
+3.- Get Provider Balance: Obtener el balance de Tokerbank en los exchange.
+4.- Provider Transaction: Transferir fondos desde un exchange a otro.
+
+Pero no veo la posibilidad de recargar fondos en los exchange en caso que ambos queden sin fondos.
+
+
+* Adicionalmente; noto que la transferencia de fondos desde un exchange a otro se hace desde la api de Towerbank, no desde la api de los exchange. ¿Eso implica que la transferencia de fondos se manejará de manera interna? o ¿Debemos hacer la transferencia usando las API de los exchange y luego notificarla a Towerbank desde su API?
+
+* ¿Quién se encarga de mantener el balance de los exchange con fondo, cuando ya no se pueda usar la transferencia de fondos entre exchange?
+
+* Una vez que se compra las criptos, ellas estarán en la cartera Towerbank en los exchange ¿Cómo se notifica cuántos criptos, a que tasa, el hash y a qué cliente corresponde esos criptos?
+
+* ¿Hay un monto mínimo a mantener en cada exchange que active la acción de transferir fondos entres exchanges?
