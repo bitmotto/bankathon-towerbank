@@ -141,6 +141,9 @@ def buy_cripto(client_info):
         print("Intente más tarde")
         return None
 
+    # TODO: Hacer la compra en cripto.
+    # Este método está hecha para Binance falta para Kraken 
+    # Simulación de la compra en el exchange
     print()
     print("Comprando criptos...")
     time.sleep(3)
@@ -201,10 +204,13 @@ def sell_cripto(client_info):
         return None
     '''
 
+    # TODO: Hacer la venta en cripto.
+    # Este método está hecha para Binance falta para Kraken 
+    # Simulación de la venta en el exchange
     print()
     print("Vendienco criptos...")
     time.sleep(3)
-
+    
     print()
     print("¡Venta éxitosa!")
     
@@ -212,6 +218,13 @@ def sell_cripto(client_info):
     transaction = t.account_transaction(client_info['accountId'], amount, "purchase")
     print(f"Transaction ID: {transaction['transferId']} - Monto: {amount}")
     print(f"Balance {transaction['balance']}")
+
+
+def funds_balance():
+    exchange_balance = get_towebank_balance()
+    print(exchange_balance)
+
+    return None
 
 
 if __name__ == "__main__":
