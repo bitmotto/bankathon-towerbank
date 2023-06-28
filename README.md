@@ -10,6 +10,8 @@ pip install -r requirements.txt
 
 ## Variables de Entorno
 
+Cree el archivo .env en el directorio raiz del proyecto e inserte las siguientes variables con los valores correspondiente. Ver .env-example
+
 ```bash
 BINANCE_API_KEY="binance api key"
 BINANCE_SECRET_KEY="binance secrret key"

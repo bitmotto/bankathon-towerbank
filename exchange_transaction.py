@@ -1,9 +1,4 @@
-import os
-from dotenv import load_dotenv
 from towerbank import TowerbankAPI
-
-load_dotenv()
-MINIMUM_AMOUNT = float(os.getenv('MINIMUM_AMOUNT'))
 
 def get_towebank_balance():
     t = TowerbankAPI()
