@@ -22,25 +22,7 @@ class BinanceApi():
 
     def get_market_prices(self, pairs: list):
         # https://binance-docs.github.io/apidocs/spot/en/#current-average-price
-        '''print("AVG Prices")
-        for pair in pairs:
-            market = self.client.avg_price(symbol=pair)
-            print(f"{pair} = {market}")
 
-        # https://binance-docs.github.io/apidocs/spot/en/#symbol-price-ticker
-        print(" ")
-        print("Price Ticker")
-        tickers = self.client.ticker_price(symbols=pairs)
-        for ticker in tickers:
-            print(f"{ticker}")
-
-        # https://binance-docs.github.io/apidocs/spot/en/#symbol-order-book-ticker
-        print(" ")
-        print("Book Ticker")
-        book_tickers = self.client.book_ticker(symbols=pairs)
-        for book in book_tickers:
-            print(book)'''
-        
         prices = dict()
         book_tickers = self.client.book_ticker(symbols=pairs)
         for book in book_tickers:

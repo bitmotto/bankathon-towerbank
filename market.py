@@ -117,14 +117,12 @@ def buy_cripto(client_info):
 
 
     prices, best_price = get_best_price_for_buy()
-    print()
-    print(f"Prices:")
+    print(f"\nPrices:")
     for e in EXCHANGES:
         print(f"{e}: {prices[e]}")
 
     best_exchange = "BINANCE"
-    print()
-    print(f"Best Prices for buy:")
+    print(f"\nBest Prices for buy:")
     for b in best_price:
         if pair == b['pair']:
             best_exchange = b['exchange']
@@ -144,14 +142,11 @@ def buy_cripto(client_info):
     # TODO: Hacer la compra en cripto.
     # Este método está hecha para Binance falta para Kraken 
     # Simulación de la compra en el exchange
-    print()
-    print("Comprando criptos...")
+    print("\nComprando criptos...")
     time.sleep(3)
 
-    print()
-    print("¡Compra éxitosa!")
+    print("\n¡Compra éxitosa!\n")
     
-    print()
     transaction = t.account_transaction(client_info['accountId'], amount, "sale")
     print(f"Transaction ID: {transaction['transferId']} - Monto: {amount}")
     print(f"Balance {transaction['balance']}")
@@ -178,14 +173,12 @@ def sell_cripto(client_info):
 
 
     prices, best_price = get_best_price_for_sell()
-    print()
-    print(f"Prices:")
+    print(f"\nPrices:")
     for e in EXCHANGES:
         print(f"{e}: {prices[e]}")
 
     best_exchange = "BINANCE"
-    print()
-    print(f"Best Prices for sell:")
+    print(f"\nBest Prices for sell:")
     for b in best_price:
         if pair == b['pair']:
             best_exchange = b['exchange']
@@ -207,14 +200,11 @@ def sell_cripto(client_info):
     # TODO: Hacer la venta en cripto.
     # Este método está hecha para Binance falta para Kraken 
     # Simulación de la venta en el exchange
-    print()
-    print("Vendienco criptos...")
+    print("\nVendienco criptos...")
     time.sleep(3)
     
-    print()
-    print("¡Venta éxitosa!")
+    print("\n¡Venta éxitosa!\n")
     
-    print()
     transaction = t.account_transaction(client_info['accountId'], amount, "purchase")
     print(f"Transaction ID: {transaction['transferId']} - Monto: {amount}")
     print(f"Balance {transaction['balance']}")
@@ -228,28 +218,25 @@ def funds_balance():
 
 
 if __name__ == "__main__":
-    print("Bienvenido")
-    print()
+    print("Bienvenido\n")
     t = TowerbankAPI()
     client_info = t.get_client_account()
 
     print("Información de la cuenta del cliente:")
     print("--------------------------------------------------------------------------")
     print(f"| Nro. cuenta {client_info['accountId']} - Balance: PAB {client_info['balance']} |")
-    print("--------------------------------------------------------------------------")
-    print()
+    print("--------------------------------------------------------------------------\n")
 
     print("Operaciones disponibles:")
     print("--------------------------------------------------------------------------")
     print("1.- Compra de criptomoneda")
     print("2.- Venta de criptomoneda")
     option = input("Presione cualquier otro valor para salir: ")
-    print()
+    print("\n")
 
     if option == "1":
         buy_cripto(client_info)
     elif option == "2":
         sell_cripto(client_info)
     else:
-        print()
-        print("Gracias, nos vemos pronto.")
+        print("\nGracias, nos vemos pronto.")
