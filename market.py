@@ -239,4 +239,4 @@ if __name__ == "__main__":
     elif option == "2":
         sell_cripto(client_info)
     else:
-        print("\nGracias, nos vemos pronto.")
+        print("Gracias, nos vemos pronto.")
